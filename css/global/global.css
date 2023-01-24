@@ -1,0 +1,45 @@
+:root {
+  --white: #FFFFFF;
+  --black-bg: #020203;
+  --blue: #00aeff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--white);
+  font: 400 1.6rem "Poppins", sans-serif;
+  background: var(--black-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;  
+}

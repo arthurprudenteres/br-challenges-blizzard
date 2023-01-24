@@ -1,0 +1,123 @@
+.games-content {
+  display: grid;
+  gap: 30px;
+  row-gap: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.game-card {
+  position: relative;
+}
+
+.game-card img {
+  transition: all .5s ease;
+}
+
+.game-card:hover img {
+  transform: scale(1.05);
+}
+
+.game-title {
+  font-size: 1.93rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.game-description {
+  font-size: 1.5rem;
+  color: #E5E5E5;
+}
+
+.game-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+#game-logo {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%,-20%);
+}
+
+.all-card {
+  max-height: 400px;
+  max-width: 300px;
+  border: 1px solid #212428;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.all-card button {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  font: 500 1.4rem "Poppins", sans-serif;
+  gap: 10px ;
+}
+
+@media screen and (max-width: 769px) {
+  .games-content {
+    gap: 30px;
+    row-gap: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .game-title {
+    font-size: 1.6rem;
+  }
+  .game-description {
+    font-size: 1.4rem;
+  }
+  .game-image {
+    margin-bottom: 17px;
+  }
+  .all-card {
+    max-height: 282px;
+  }
+  #game-logo {
+    max-width: 106px;
+  }
+}
+
+@media screen and (max-width: 426px) { 
+  .games-content {
+    gap: 16px;
+    row-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  }
+  #game-logo {
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+  }
+  .game-card p {
+    display: none;
+  }
+  .all-card {
+    max-height: 248px;
+  }
+}
+
+@media screen and (max-width: 376px) { 
+  .all-card {
+    max-height: 213px;
+  }
+  #game-logo {
+    max-width: 82px;
+  }
+}
+
+@media screen and (max-width: 321px) { 
+  .all-card {
+    display: none;
+  }
+}

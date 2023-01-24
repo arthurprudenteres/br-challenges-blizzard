@@ -1,0 +1,101 @@
+.main {
+  width: 100%;
+  padding-bottom: 108px;
+}
+
+.settings-games {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  display: grid;
+  grid-template-columns: 200px 350px auto auto
+}
+
+.settings-games h3 {
+  padding-top: 21px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8F9199;
+}
+
+.settings-games h2 {
+  max-width: 10ch;
+  font-weight: bold;
+  font-size: 3.2rem;
+}
+
+.platforms {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.platforms a svg #blizzard,
+.platforms a svg #nin, 
+.platforms a svg #xbox,
+.platforms a svg #ps {
+  fill: #8F9199;
+  transition: all .3s ease;
+}
+
+.platforms a svg:hover #blizzard,
+.platforms a svg:hover #nin, 
+.platforms a svg:hover #xbox,
+.platforms a svg:hover #ps {
+  fill: var(--white);
+}
+
+.all-games {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  padding-bottom: 10px;
+}
+
+.all-games button {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  font: 500 1.6rem "Poppins", sans-serif;
+  color: var(--blue);
+  gap: 10px ;
+  transition: all .3s ease;
+}
+
+.all-games button:hover {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+@media screen and (max-width: 769px) {
+  .settings-games {
+    grid-template-columns: 270px auto auto;
+    padding-bottom: 58px;
+  }
+  .settings-games h3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .main {
+    padding-bottom: 59px;
+  }
+  .platforms {
+    display: none;
+  }
+  .settings-games {
+    padding-top: 58px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 376px) { 
+  .settings-games h2 {
+    font-size: 2.8rem;
+  }
+  .all-games button {
+    font-size: 1.4rem;
+  }
+}

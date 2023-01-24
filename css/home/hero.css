@@ -1,0 +1,169 @@
+.main-hero {
+  display: grid;
+  grid-template-columns: 1fr 4fr 380px;
+}
+
+.game-icons ul{
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  margin-bottom: 170px;
+}
+
+.game-icons-h ul {
+  margin-top: 52px;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  margin-bottom: 102px;
+}
+
+.game-icons ul img,
+.game-icons-h ul img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all .3s ease;
+}
+
+.game-icons ul img:hover,
+.game-icons .active-game img,
+.game-icons-h ul img:hover,
+.game-icons-h .active-game img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-weight: bold;
+  font-size: 6.4rem;
+  max-width: 15ch;
+  line-height: 110%;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.hero-content button {
+  font: 600 1.6rem "Poppins", sans-serif;
+  color: var(--white);
+  padding: 14px 32px;
+  background: var(--blue);
+  border: none;
+  border-radius: 4px;
+  transition: all .5s ease;
+}
+
+.hero-content button:hover {
+  filter: brightness(1.2);
+}
+
+.extra-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.trailer-img {
+  transform: translateY(-40px) !important;
+}
+
+.trailer-content p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: end;
+}
+
+.trailer-cover {
+  position: relative;
+  max-width: 280px;
+  margin-bottom: 103px;
+  cursor: pointer;
+  box-shadow: 0px 12px 10px rgba(0, 0, 0, 0.7);
+}
+
+.trailer-image {
+  position: absolute;
+  transition: all .5s ease;
+}
+
+.trailer-gif {
+  border-radius: 4px;
+  height: 158px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.trailer-image:hover {
+  opacity: 0;
+}
+
+.trailer-cover::after {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-image: url(../../assets/icons/play-button.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.trailer-cover:hover::after {
+  display: none;
+}
+
+@media screen and (max-width: 769px) {
+  .main-hero {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    position: relative;
+  }
+  .hero-content {
+    grid-row: 1;
+  }
+  .game-icons ul{
+    flex-direction: row;
+    margin-bottom: 102px;
+  }
+  .trailer-content p {
+    display: none;
+  }
+  .trailer-cover {
+    max-width: 280px;
+  }
+  .extra-content {
+    gap: 210px;
+    top: 128px;
+    right: 45px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #hero-title {
+    max-width: 11ch;
+    font-size: 4rem;
+  }
+  .extra-content {
+    display: none;
+  }
+  .game-icons ul {
+    margin-top: 48px;
+    margin-bottom: 65px;
+  }
+}
