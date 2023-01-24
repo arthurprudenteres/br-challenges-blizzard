@@ -3,14 +3,20 @@ const API_URL = "https://api.brchallenges.com/api/blizzard/games"
 const downloadBtn = document.getElementById("download-system");
 const heroContent = document.getElementById("hero-content");
 const asideContent = document.getElementById("extra-content");
-const heroBg = document.getElementById("hero-bg");
 const gameSelection1 = document.getElementById("game1");
 const gameSelection2 = document.getElementById("game2");
 const gameSelection3 = document.getElementById("game3");
 const gamesDiv = document.getElementById("games-content");
-const gameElements = document.querySelectorAll(".game-icons li")
+const gameNav = document.getElementById("drop-games");
+const sportsNav = document.getElementById("drop-esports");
+const modalBtn = document.getElementById("close-modal");
+const modalPop = document.getElementById("modal");
+const loginBtn = document.getElementById("login");
 
+// FUNCTIONS
 function changeSelection() {
+  const gameElements = document.querySelectorAll(".game-icons li");
+
   gameElements.forEach((element) => {
     element.addEventListener('click', () => {
       gameElements.forEach(el => el.classList.remove("active-game"));
@@ -68,6 +74,7 @@ async function setGamesData() {
   })
 }
 
+// EVENTS
 gameSelection1.addEventListener('click', () => {
   document.getElementById('hero-bg').style.backgroundImage =
   "url(./assets/banner-hero/games/diablo-bg.png)";
@@ -128,6 +135,15 @@ gameSelection3.addEventListener('click', () => {
   </div>`;
 })
 
+
+loginBtn.addEventListener('click', () => {
+  modalPop.classList.add('active');
+})
+
+modalBtn.addEventListener('click', () => {
+  modalPop.classList.remove('active');
+})
+
 changeSelection();
-getSystem();
 setGamesData()
+getSystem();

@@ -1,6 +1,7 @@
 .footer-bg {
-  background: url(../../assets/footer-background.png);
+  background: radial-gradient(51.3% 51.3% at 59.72% 41.83%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url(../../assets/footer-bg.png);
   background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
@@ -13,8 +14,8 @@
   background-image: url(../../assets/ilustrations/app.png);
   background-repeat: no-repeat;
   position: absolute;
-  top: 0;
-  left: 506px;
+  top: 0px;
+  left: 35%;
   -webkit-animation: mover 2.5s infinite  alternate;
   animation: mover 2.5s infinite  alternate;
 }
@@ -26,7 +27,7 @@
   background-image: url(../../assets/ilustrations/app-mini.png);
   background-repeat: no-repeat;
   position: absolute;
-  left: 800px;
+  left: 52%;
   top: 370px;
   -webkit-animation: mover 2s infinite  alternate;
   animation: mover 2s infinite  alternate;
@@ -73,6 +74,12 @@
   border-radius: 4px;
   padding: 14px 32px;
   margin-bottom: 48px;
+  transition: all .3s ease;
+}
+
+.footer-content button:hover {
+  -webkit-filter: brightness(1.15);
+  filter: brightness(1.15);
 }
 
 .mobile {
@@ -142,7 +149,7 @@
     top: -50%;
     left: -50%;
     z-index: -1;
-    background: url(../../assets/footer-background.png) 0 0 repeat;
+    background: url(../../assets/footer-bg.png) 0 0 repeat;
     transform: rotate(-180deg);
   }
 }

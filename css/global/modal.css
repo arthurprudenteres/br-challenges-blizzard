@@ -1,0 +1,99 @@
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all .3s ease;
+  z-index: -1;
+  background: radial-gradient(transparent, rgba(22, 22, 20, 0.7));
+}
+
+.modal.active {
+  opacity: 1;
+  position: fixed;
+  z-index: 1;
+}
+
+.modal-box {
+  border-radius: 4px;
+  padding: 24px;
+  width: 696px;
+  height: 600px;
+  background: url(../../assets/modal-bg.png);
+  background-color: var(--black-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#close-modal {
+  width: 32px;
+  background: transparent;
+  border: none;
+  align-self: flex-end;
+  margin-bottom: 5px;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forms > img {
+  margin-bottom: 40px;
+}
+
+.forms p a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.forms p:nth-child(6) {
+  margin-bottom: 16px;
+}
+
+#mail-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 426px;
+  margin-bottom: 24px;
+}
+
+#mail-phone input,
+#connect {
+  font: 500 1.5rem "Poppins", sans-serif;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+}
+
+#connect {
+  font-size: 1.4rem;
+  background: var(--blue);
+  padding: 14px 0;
+  width: 426px;
+  color: var(--white);
+  margin-bottom: 41px;
+}
+
+.social-icons {
+  margin-top: 16px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-box button {
+  border: none;
+  border-radius: 4px;
+  background: var(--white);
+  padding: 14px;
+}
