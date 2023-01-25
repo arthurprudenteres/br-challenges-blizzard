@@ -1,6 +1,5 @@
 const API_URL = "https://api.brchallenges.com/api/blizzard/games"
 
-const preLoader = document.getElementById("pre-loader");
 const downloadBtn = document.getElementById("download-system");
 const heroContent = document.getElementById("hero-content");
 const asideContent = document.getElementById("extra-content");
@@ -15,6 +14,8 @@ const modalPop = document.getElementById("modal");
 const loginBtn = document.getElementById("login");
 const menuDrop = document.getElementById("menu");
 const header = document.querySelector(".header");
+const menuContent = document.querySelector(".menu-content");
+const menuSports = document.querySelector(".menu-sports");
 
 // FUNCTIONS
 function changeSelection() {
@@ -78,6 +79,7 @@ async function setGamesData() {
 }
 
 // EVENTS
+// DAQUI PRA BAIXO FICOU EXTREMAMENTE AMADOR
 
 gameSelection1.addEventListener('click', () => {
   document.getElementById('hero-bg').style.backgroundImage =
@@ -147,21 +149,27 @@ modalBtn.addEventListener('click', () => {
   modalPop.classList.remove('active');
 })
 
+// NAVEGAÇÃO BUGADA
 gameNav.addEventListener('click', () => {
+  sportsNav.classList.remove('menu-active')
   menuDrop.classList.toggle('menu-active')
-  menuDrop.classList.toggle('hidden')
+  menuDrop.classList.toggle('up')
   document.getElementById('hero-bg').classList.toggle('menu-active')
   header.classList.toggle('menu-active')
   gameNav.classList.toggle('menu-active')
+  menuSports.classList.toggle('hidden')
 })
 
 sportsNav.addEventListener('click', () => {
+  gameNav.classList.remove('menu-active')
   menuDrop.classList.toggle('menu-active')
-  menuDrop.classList.toggle('hidden')
+  menuDrop.classList.toggle('up')
   document.getElementById('hero-bg').classList.toggle('menu-active')
   header.classList.toggle('menu-active')
   sportsNav.classList.toggle('menu-active')
+  menuContent.classList.toggle('hidden')
 })
+
 
 changeSelection();
 setGamesData()
