@@ -8,13 +8,13 @@
   transition: all .5s ease;
 }
 
+#menu.menu.hidden {
+  transform: translateY(-1000px)
+}
+
 .menu-content {
   padding-top: 168px;
   margin-bottom: 69px;
-}
-
-#menu.menu.hidden {
-  transform: translateY(-1000px)
 }
 
 .menu-content ul {
@@ -28,7 +28,6 @@
 
 .menu-content ul li {
   color: #9D9D9D;
-  align-items: center;
 }
 
 .menu-content ul li img {
@@ -67,4 +66,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+@media screen and (max-width: 850px) {
+  #menu {
+    display: none;
+  }
 }

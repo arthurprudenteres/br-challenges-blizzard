@@ -81,6 +81,11 @@
   width: 426px;
   color: var(--white);
   margin-bottom: 41px;
+  transition: filter .5s ease;
+}
+
+#connect:hover {
+  filter: brightness(1.2);
 }
 
 .social-icons {
@@ -97,4 +102,12 @@
   border-radius: 4px;
   background: var(--white);
   padding: 14px;
+  transition: all .5s ease;
+}
+
+.social-box button:hover {
+  background: var(--blue);
+}
+.social-box button:hover svg path {
+  fill: var(--white);
 }
