@@ -1,5 +1,6 @@
 const API_URL = "https://api.brchallenges.com/api/blizzard/games"
 
+const preLoader = document.getElementById("pre-loader");
 const downloadBtn = document.getElementById("download-system");
 const heroContent = document.getElementById("hero-content");
 const asideContent = document.getElementById("extra-content");
@@ -77,6 +78,10 @@ async function setGamesData() {
 }
 
 // EVENTS
+window.addEventListener("load", () => {
+  preLoader.style.display = "none";
+})
+
 gameSelection1.addEventListener('click', () => {
   document.getElementById('hero-bg').style.backgroundImage =
   "url(./assets/banner-hero/games/diablo-bg.png)";

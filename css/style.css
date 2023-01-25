@@ -4,6 +4,7 @@
 @import url(./global/components.css);
 @import url(./global/modal.css);
 @import url(./global/menu.css);
+@import url(./global/preload.css);
 
 @import url(./home/hero.css);
 @import url(./home/main.css);
