@@ -44,12 +44,22 @@
   z-index: 2;
 }
 
-#drop-games img {
+#drop-games a svg,
+#drop-esports a svg {
   transition: all .3s ease;
 }
 
-#drop-games.menu-active img {
+#drop-games.menu-active a svg,
+#drop-esports.menu-active a svg {
   transform: rotate(-180deg);
+}
+
+#drop-games.menu-active a svg path,
+#drop-games.menu-active a,
+#drop-esports.menu-active a svg path,
+#drop-esports.menu-active a {
+  color: var(--blue);
+  stroke: var(--blue);
 }
 
 .header-logo::after {

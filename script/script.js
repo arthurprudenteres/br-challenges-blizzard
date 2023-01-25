@@ -153,6 +153,14 @@ gameNav.addEventListener('click', () => {
   gameNav.classList.toggle('menu-active')
 })
 
+sportsNav.addEventListener('click', () => {
+  menuDrop.classList.toggle('menu-active')
+  menuDrop.classList.toggle('hidden')
+  document.getElementById('hero-bg').classList.toggle('menu-active')
+  header.classList.toggle('menu-active')
+  sportsNav.classList.toggle('menu-active')
+})
+
 changeSelection();
 setGamesData()
 getSystem();
