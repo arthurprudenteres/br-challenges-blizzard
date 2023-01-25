@@ -78,9 +78,6 @@ async function setGamesData() {
 }
 
 // EVENTS
-window.addEventListener("load", () => {
-  preLoader.style.display = "none";
-})
 
 gameSelection1.addEventListener('click', () => {
   document.getElementById('hero-bg').style.backgroundImage =
