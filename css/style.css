@@ -2,8 +2,9 @@
 @import url(./global/header.css);
 @import url(./global/footer.css);
 @import url(./global/components.css);
+@import url(./global/modal.css);
+@import url(./global/menu.css);
 
 @import url(./home/hero.css);
 @import url(./home/main.css);
 @import url(./home/games.css);
-@import url(./global/modal.css);

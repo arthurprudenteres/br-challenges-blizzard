@@ -12,6 +12,8 @@ const sportsNav = document.getElementById("drop-esports");
 const modalBtn = document.getElementById("close-modal");
 const modalPop = document.getElementById("modal");
 const loginBtn = document.getElementById("login");
+const menuDrop = document.getElementById("menu");
+const header = document.querySelector(".header");
 
 // FUNCTIONS
 function changeSelection() {
@@ -19,7 +21,7 @@ function changeSelection() {
 
   gameElements.forEach((element) => {
     element.addEventListener('click', () => {
-      gameElements.forEach(el => el.classList.remove("active-game"));
+      gameElements.forEach((el) => el.classList.remove("active-game"));
       element.classList.add("active-game");
     });
   });
@@ -135,13 +137,20 @@ gameSelection3.addEventListener('click', () => {
   </div>`;
 })
 
-
 loginBtn.addEventListener('click', () => {
   modalPop.classList.add('active');
 })
 
 modalBtn.addEventListener('click', () => {
   modalPop.classList.remove('active');
+})
+
+gameNav.addEventListener('click', () => {
+  menuDrop.classList.toggle('menu-active')
+  menuDrop.classList.toggle('hidden')
+  document.getElementById('hero-bg').classList.toggle('menu-active')
+  header.classList.toggle('menu-active')
+  gameNav.classList.toggle('menu-active')
 })
 
 changeSelection();

@@ -27,8 +27,8 @@
   top: 97px;
 }
 
-.hidden {
-  display: none;
+.hero-bg.menu-active::after{
+  z-index: 2;
 }
 
 .header {
@@ -38,6 +38,18 @@
   padding: 28px 0;
   margin-bottom: 110px;
   position: relative;
+}
+
+.header.menu-active {
+  z-index: 2;
+}
+
+#drop-games img {
+  transition: all .3s ease;
+}
+
+#drop-games.menu-active img {
+  transform: rotate(-180deg);
 }
 
 .header-logo::after {

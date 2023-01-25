@@ -8,6 +8,7 @@
   opacity: 0;
   transition: all .3s ease;
   z-index: -1;
+  overflow: hidden;
   background: radial-gradient(transparent, rgba(22, 22, 20, 0.7));
 }
 
